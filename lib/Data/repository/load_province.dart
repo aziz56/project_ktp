@@ -3,12 +3,10 @@ import 'package:project_ktp/Domain/entities/provinces_entities.dart';
 import 'package:project_ktp/Domain/entities/regencies_entities.dart';
 
 class ProvinceRepository {
-  final DataSource dataSource;
-
-  ProvinceRepository({required this.dataSource});
-
+  var dataSource = DataSource();
   Future<List<ProvinceModel>> loadProvince() async {
     var result = await dataSource.loadProvince();
-    return result; ;
+    var province = provinceModelFromJson(result);
+    return province;
   }
 }

@@ -6,13 +6,14 @@ import 'package:project_ktp/Domain/entities/provinces_entities.dart';
 import 'package:project_ktp/Domain/entities/regencies_entities.dart';
 
 class DataSource {
-  Future<List<ProvinceModel>> loadProvince() async {
+  Future<String> loadProvince() async {
     var provinceToLoad = await rootBundle.loadString('assets/provinces.json');
-    return provinceModelFromJson(provinceToLoad);
+    provinceModelFromJson(provinceToLoad);
+    return provinceToLoad;
   }
-
-  Future<List<RegenciesModel>> loadRegencies() async {
+  Future<String> loadRegencies() async {
     var regencyToLoad = await rootBundle.loadString('assets/regencies.json');
-    return regenciesModelFromJson(regencyToLoad);
+    regenciesModelFromJson(regencyToLoad);
+    return regencyToLoad;
   }
 }

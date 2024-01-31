@@ -1,6 +1,7 @@
 
 // File: person_hive_model.dart
 import 'package:hive/hive.dart';
+part 'person_hive_model.g.dart';
 
 
 @HiveType(typeId: 0)

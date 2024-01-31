@@ -1,7 +1,7 @@
 // Dalam file hive_data_source.dart
 import 'package:hive/hive.dart';
 import 'package:project_ktp/Domain/entities/person_hive_model.dart';
-import 'package:project_ktp/data/model/person_hive_model.dart';
+
 
 class HiveDataSource {
   static const String boxName = 'persons';

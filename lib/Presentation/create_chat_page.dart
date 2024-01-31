@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_ktp/Domain/entities/provinces_entities.dart';
 import 'package:project_ktp/Domain/entities/regencies_entities.dart';
-import 'package:project_ktp/Domain/usecase/usecase_provinces.dart';
-import 'package:project_ktp/Domain/usecase/usecase_regencies.dart';
+import 'package:project_ktp/Domain/usecase/usecase_getProvinces.dart';
+import 'package:project_ktp/Domain/usecase/usecase_getRegencies.dart';
 
 class CreateChatPage extends StatefulWidget {
   const CreateChatPage({Key? key}) : super(key: key);

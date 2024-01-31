@@ -2,12 +2,13 @@ import 'package:project_ktp/Data/datasource/datasource.dart';
 import 'package:project_ktp/Domain/entities/regencies_entities.dart';
 
 class RegencyRepository {
-  final DataSource dataSource;
+  var dataSource = DataSource();
 
-  RegencyRepository({required this.dataSource});
 
-  Future<List<RegenciesModel>> loadRegencies() async {
-    final result = await dataSource.loadRegencies();
-    return result;
+  Future<List<RegenciesModel>> loadRegencies(String id) async {
+    var result = await dataSource.loadRegencies();
+    var regencyJson = regenciesModelFromJson(result);
+    var getRegency = regencyJson.where((regency) => regency.provinceId == id).toList();
+    return getRegency;
   }
 }
